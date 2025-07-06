@@ -17,6 +17,11 @@ console.error(err);
 })
 const app = express();
 app.use(cors())
+
+app.get("/check", (_, res) => {
+  res.status(200).send("User Service Is Working");
+});
+
 import songRoutes from "./route.js";
 app.use("/api/v1", songRoutes);
 
